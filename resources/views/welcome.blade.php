@@ -13,13 +13,20 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-image: #fff;
+                color: #ffffff;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
             }
+            body {
+                  background: url('{{ asset('/images/bg.jpg') }}') no-repeat center center fixed;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                }
 
             .full-height {
                 height: 100vh;
@@ -50,7 +57,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #ffffff;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -79,15 +86,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    #Hashtag
                 </div>
             </div>
         </div>
