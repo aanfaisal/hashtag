@@ -25,7 +25,7 @@ class Account extends Model
      *
      * @var array
      */
-    protected $fillable = ['email', 'password', 'idinsta'];
+    protected $fillable = ['email', 'password', 'hashtag'];
 
-    
+
 }

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Photo;
 use Illuminate\Http\Request;
-use Instagram;
+use instagram;
 use Session;
 
 class PhotoController extends Controller {

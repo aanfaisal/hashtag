@@ -15,7 +15,7 @@ class CreatePhotosTable extends Migration
         Schema::create('photos', function(Blueprint $table) {
             $table->increments('photo_id');
             $table->string('foto');
-            $table->string('printed');
+            $table->enum('printed', ['sudah', 'belum']);
             $table->timestamps();
         });
     }

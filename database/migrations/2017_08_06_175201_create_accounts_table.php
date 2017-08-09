@@ -16,7 +16,7 @@ class CreateAccountsTable extends Migration
             $table->increments('insta_id');
             $table->string('email');
             $table->string('password');
-            $table->string('idinsta');
+            $table->string('hashtag');
             $table->timestamps();
         });
     }
