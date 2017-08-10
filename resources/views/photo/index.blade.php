@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
+            @include('layouts.sidebar')
 
             <div class="col-md-9">
                 <div class="panel panel-default">
@@ -30,17 +30,16 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th>Foto</th><th>Printed</th><th>Actions</th>
+                                        <th>No</th><th>Foto</th><th>Printed</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($photo as $item)
                                     <tr>
-                                        <td>{{ $item->id }}</td>
+                                        <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->foto }}</td><td>{{ $item->printed }}</td>
                                         <td>
                                             <a href="{{ url('/photo/' . $item->photo_id) }}" title="View Photo"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                            <a href="{{ url('/photo/' . $item->photo_id . '/edit') }}" title="Edit Photo"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
                                             {!! Form::open([
                                                 'method'=>'DELETE',
                                                 'url' => ['/photo', $item->photo_id],

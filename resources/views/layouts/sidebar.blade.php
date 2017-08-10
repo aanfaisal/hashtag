@@ -11,6 +11,16 @@
                         Dashboard
                     </a>
                 </li>
+                <li role="presentation">
+                    <a href="{{ url('/photo') }}">
+                        List Photo
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="{{ url('/account/1') }}">
+                        Setting Akun Insta
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

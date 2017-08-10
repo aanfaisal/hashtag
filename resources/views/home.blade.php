@@ -3,12 +3,19 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        @include('layouts.sidebar')
+
+        <div class="col-md-9">
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                  <div class="bs-example" data-example-id="simple-jumbotron">
+                    <div class="jumbotron">
+                      <h1>Hello, {{ auth()->user()->name }}</h1>
+                      <p>Welcome To {{ env('APP_NAME') }}.</p>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>

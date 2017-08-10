@@ -3,15 +3,13 @@
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
+            @include('layouts.sidebar')
 
             <div class="col-md-9">
                 <div class="panel panel-default">
                     <div class="panel-heading">Account</div>
                     <div class="panel-body">
-                        <a href="{{ url('/account/create') }}" class="btn btn-success btn-sm" title="Add New Account">
-                            <i class="fa fa-plus" aria-hidden="true"></i> Add New
-                        </a>
+
 
                         {!! Form::open(['method' => 'GET', 'url' => '/account', 'class' => 'navbar-form navbar-right', 'role' => 'search'])  !!}
                         <div class="input-group">
@@ -30,14 +28,14 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th>Email</th><th>Password</th><th>Idinsta</th><th>Actions</th>
+                                        <th>ID</th><th>Email</th><th>Password</th><th>Hashtag</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($account as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td>{{ $item->email }}</td><td>{{ $item->password }}</td><td>{{ $item->idinsta }}</td>
+                                        <td>{{ $item->email }}</td><td>{{ $item->password }}</td><td>{{ $item->hashtag }}</td>
                                         <td>
                                             <a href="{{ url('/account/' . $item->insta_id) }}" title="View Account"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/account/' . $item->insta_id . '/edit') }}" title="Edit Account"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
