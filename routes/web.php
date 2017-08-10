@@ -17,7 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::resource('account', 'AccountController');
-Route::resource('photo', 'PhotoController');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::resource('account', 'AccountController',['only' => ['edit', 'show', 'store', 'update']]);
+    Route::resource('photo', 'PhotoController');
+});
