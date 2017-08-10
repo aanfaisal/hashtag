@@ -52,9 +52,9 @@ class AccountController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $requestData = $request->all();
-        
+
         Account::create($requestData);
 
         Session::flash('flash_message', 'Account added!');
@@ -100,9 +100,9 @@ class AccountController extends Controller
      */
     public function update($id, Request $request)
     {
-        
+
         $requestData = $request->all();
-        
+
         $account = Account::findOrFail($id);
         $account->update($requestData);
 

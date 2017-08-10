@@ -27,5 +27,13 @@ class Account extends Model
      */
     protected $fillable = ['email', 'password', 'hashtag'];
 
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password',
+    ];
 
 }
