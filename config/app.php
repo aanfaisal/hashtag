@@ -179,7 +179,8 @@ return [
 		Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
 		Collective\Html\HtmlServiceProvider::class,
 		Barryvdh\Debugbar\ServiceProvider::class,
-		Intervention\Image\ImageServiceProvider::class
+		Intervention\Image\ImageServiceProvider::class,
+		Nakukryskin\InstagramApi\LaravelInstagramApiProvider::class,
 
 	],
 
@@ -232,7 +233,7 @@ return [
 		'Form' => Collective\Html\FormFacade::class,
 		'Html' => Collective\Html\HtmlFacade::class,
 		'Debugbar' => Barryvdh\Debugbar\Facade::class,
-		'instagram' => InstagramAPI\Instagram::class,
+		'Instagram' => Nakukryskin\InstagramApi\Facades\InstagramApi::class,
 		'Image' => Intervention\Image\Facades\Image::class,
 	],
 
